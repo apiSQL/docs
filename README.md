@@ -61,6 +61,7 @@ The Code, sdk
 
 ### output: collection | CRUD
 many items
+Collection as model,view (one or more models)
 
     Schema:
         source-output-model-command
@@ -68,6 +69,12 @@ many items
     Path:
         {source}/{output}/{model}/{command}    
 
+
+    Condition:
+        where: id/1/2/3/4/5
+        between: id/10/20
+        where: name/to
+    
     Command
         Create - json can many create
         read - can many list
@@ -90,8 +97,11 @@ one item
         source-output-model-method-command-param-value
 
     Path:
-        {source}/{output}/{model}/{command}/{param}/{value}/
+        {source}/{output}/{model}/{command}/{condition}/{param}/{value}/
 
+    Condition:
+        where
+    
     Command:
         ReadBy
         UpdateBy -json
@@ -103,23 +113,28 @@ one item
     db/model/user/DeleteBy/login/tom
         
         
-### output: param | GS
+### output: param | RU
 one param from one item
 
     Schema:
         source-output-model-param-param-value
 
     Path:
-        {source}/{output}/{model}/{param}/{command}/{param}/{value}/
+        {source}/{output}/{model}/{param}/{command}/{condition}/{param}/{value}/
 
+    Condition:
+        where
+    
     Command:
-        GetBy
-        SetBy
+        Get - Read
+        Set - Update
 
 #### Example:
 
-    db/param/model/user/GetBy/id/10
-    db/param/model/user/SetBy/login/tom
+    db/param/user/login/Read/id/10
+    db/param/user/password/read/where/login/tom
+    db/param/user/login/update/where/login/tom
+    
     
 ### Routing, Example
 
