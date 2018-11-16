@@ -1,6 +1,9 @@
 # docs
 Doumentation, Tutorial, Information, Comparasion to another tools
 
+## Why apiSQL
+This is tool, which is the first step to reach in practical some parts of goals for UnitApi which will be later the main standard to build any API
+
 # apiSQL
 This tools is able to create meta data from SQL statement and SQL schema
 The way from SQL to API is possbile with one step, just for configuration
