@@ -1,0 +1,31 @@
+user:
+  id: int
+  name: string
+  password: string
+  role: role[]
+
+role:
+  id: int
+  name: string
+  
+ 
+Writer
+  user: user
+  
+  
+keyword:
+  id: int
+  title: string
+    
+
+tag:
+  id: int
+  title: string
+  
+article:
+  id: int
+  keywords: keyword[]
+  tags: tag[]
+  author:
+  
+  
