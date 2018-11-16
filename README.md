@@ -37,95 +37,95 @@ The Code, sdk
 
 ## Parsing, Structure of schema
 
-Source
-    Collection
-        Object
-            Param
-       
-Collection
-    List: 1,2,9,11
-    Range: 1-11, A-M 
-    Filter:
-        Object,Param
+    Source
+        Collection
+            Object
+                Param
 
-Object:
-    Create
-    Read
-    Update
-    Delete
-    
-Param
-    Get
-    Set
+    Collection
+        List: 1,2,9,11
+        Range: 1-11, A-M 
+        Filter:
+            Object,Param
+
+    Object:
+        Create
+        Read
+        Update
+        Delete
+
+    Param
+        Get
+        Set
 
 
 ### C + Collection
 
-Schema:
-    source-'collection'-model-{command}
+    Schema:
+        source-'collection'-model-{command}
 
-Path:
-    {source}/{model}/{param}/{value}/
+    Path:
+        {source}/{model}/{param}/{value}/
 
-Example:
-    db/collection/user/create
-    db/collection/user/list
-    
-Create - json
-List
-    Filter - json
-    Range - json
+    Example:
+        db/collection/user/create
+        db/collection/user/list
+
+    Create - json
+    List
+        Filter - json
+        Range - json
 
 
 
 ### RUD + GS
 
-Schema:
-    source-'model'-model-param-value
+    Schema:
+        source-'model'-model-param-value
 
-Path:
-    {source}/{model}/{param}/{value}/
+    Path:
+        {source}/{model}/{param}/{value}/
 
-Example:
-    db/model/user/id/10
-    db/model/user/login/tom
-    
-Read
-Update -json
-Delete
-    
-Get
-Set
+    Example:
+        db/model/user/id/10
+        db/model/user/login/tom
+
+    Read
+    Update -json
+    Delete
+
+    Get
+    Set
 
 ### Routing, Example
 
-Model: User
-Structure:
-User:
-    id
-    login
-    password
-    created_at
+    Model: User
+    Structure:
+    User:
+        id
+        login
+        password
+        created_at
 
 #### Routing
-{Param}  = id
-{items} = 1,2,3
+    {Param}  = id
+    {items} = 1,2,3
 
-https://domain/{source}/User/Collection/List/{Param}/{items}
-https://domain/{source}/User/Collection/Range/{Param}/{items}
-https://domain/{source}/User/Object/Update/{Param}/{items}
+    https://domain/{source}/User/Collection/List/{Param}/{items}
+    https://domain/{source}/User/Collection/Range/{Param}/{items}
+    https://domain/{source}/User/Object/Update/{Param}/{items}
 
-Pattern:
-https://domain/{source}/{model}/param/get/{param}/{name}/
+    Pattern:
+    https://domain/{source}/{model}/param/get/{param}/{name}/
 
-Example:
-https://domain/source/{source}/model/{model}/param/{param}/get/id/10/
+    Example:
+    https://domain/source/{source}/model/{model}/param/{param}/get/id/10/
+
 #### Get Login
 
-    
-GET https://domain/{source}/{model}/{param}/{value} /param/ login /get/ where / 
-GET https://domain/   db   / user  /   id / 10 /param/ login /get/ where / 
-GET https://domain/source/ db /model/ user /param/ login /get/ where / id / 10 /
+    GET https://domain/{source}/{model}/{param}/{value} /param/ login /get/ where / 
+    GET https://domain/   db   / user  /   id / 10 /param/ login /get/ where / 
+    GET https://domain/source/ db /model/ user /param/ login /get/ where / id / 10 /
 
 #### Set Password
 PUT https://domain/source/ db /model/ user /param/ password /set/ id / 10 
