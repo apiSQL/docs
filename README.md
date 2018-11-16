@@ -214,12 +214,12 @@ The SQL Statements for:
 
 # TODO 
 
-## 1. Pierwszy prototyp
+## 1 prototyp
 zamiast pliku - zmienne w array dla modelu i konfiguracji
 petla parsowania
 wygenerowane 9 zapytan
 
-## 2. Drugi prototyp
+## 2 prototyp
 plik konfiguracyjny
 czytanie yaml pliku i zamiana na array
 plik z modelami danych i relacjami
@@ -227,7 +227,7 @@ czytanie pliku z modelami
 petla parsowania
 wygenerowane wielu modeli i 9 zapytan
 
-## 3. Drugi prototyp
+## 3 prototyp
 plik konfiguracyjny
 czytanie yaml pliku i zamiana na array
 plik z modelami danych i relacjami
