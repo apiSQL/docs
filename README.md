@@ -206,10 +206,32 @@ The SQL Statements for:
 ## SQL Inspector
 
 
-
-
 ## Functionality
 + Create metada from SQL schema
 + Create REST API based on SWAGGER From Metadata
 + Generate sdk for SWAGGER API
+
+
+# TODO 
+
+## 1. Pierwszy prototyp
+zamiast pliku - zmienne w array dla modelu i konfiguracji
+petla parsowania
+wygenerowane 9 zapytan
+
+## 2. Drugi prototyp
+plik konfiguracyjny
+czytanie yaml pliku i zamiana na array
+plik z modelami danych i relacjami
+czytanie pliku z modelami
+petla parsowania
+wygenerowane wielu modeli i 9 zapytan
+
+## 3. Drugi prototyp
+plik konfiguracyjny
+czytanie yaml pliku i zamiana na array
+plik z modelami danych i relacjami
+czytanie pliku z modelami
+generowanie 9 zapytan do kazdego modelu
+dodatkowe rozpoznawanie 
 
