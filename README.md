@@ -59,44 +59,59 @@ The Code, sdk
         Set
 
 
-### C + Collection
+### output: collection
 
     Schema:
-        source-'collection'-model-{command}
+        source-output-model-command
 
     Path:
-        {source}/{model}/{param}/{value}/
+        {source}/{output}/{model}/{command}
 
     Example:
         db/collection/user/create
         db/collection/user/list
 
-    Create - json
-    List
-        Filter - json
-        Range - json
+    Command
+        Create - json
+        List
+            Filter - json
+            Range - json
 
 
 
-### RUD + GS
+### output: model
 
     Schema:
-        source-'model'-model-param-value
+        source-output-model-method-command-param-value
 
     Path:
-        {source}/{model}/{param}/{value}/
+        {source}/{output}/{model}/{command}/{param}/{value}/
 
     Example:
         db/model/user/id/10
         db/model/user/login/tom
 
-    Read
-    Update -json
-    Delete
+    Command:
+        ReadBy
+        UpdateBy -json
+        DeleteBy
 
-    Get
-    Set
+### output: param
 
+    Schema:
+        source-output-model-param-param-value
+
+    Path:
+        {source}/{output}/{model}/{param}/{command}/{param}/{value}/
+
+    Example:
+        db/model/user/id/10
+        db/model/user/login/tom
+
+    Command:
+        GetBy
+        SetBy
+    
 ### Routing, Example
 
     Model: User
