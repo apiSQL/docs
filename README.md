@@ -1,6 +1,23 @@
 # docs
 Doumentation, Tutorial, Information, Comparasion to another tools
 
+## Existing solutions
+https://cloud-elements.com/elements/sql-server-api/
+
+One-to-Many
+One API Integration to connect you to all the leading database services: MySQL, SQL Server and PostreSQL.
+HubSpot API
+
+
+Simple Data Mapping
+Using Element Mapper, our drag-and-drop UI, easily map and normalize data objects and fields between leading cloud services.
+Marketing Cloud Services
+
+
+Stay Up to Date
+We even manage user access and authentication, API updates, logging and monitoring, all from a consistent platform.
+
+
 ## Why apiSQL
 This is tool, which is the first step to reach in practical some parts of goals for UnitApi which will be later the main standard to build any API
 
