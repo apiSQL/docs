@@ -17,6 +17,13 @@ Marketing Cloud Services
 Stay Up to Date
 We even manage user access and authentication, API updates, logging and monitoring, all from a consistent platform.
 
+## Make Api fast
+https://nordicapis.com/making-fast-apis-lessons-learned-from-40-years-of-sql/
+
+
+## Another
+https://carto.com/developers/sql-api/reference/#operation/postSQLStatement
+
 
 ## Why apiSQL
 This is tool, which is the first step to reach in practical some parts of goals for UnitApi which will be later the main standard to build any API
