@@ -4,6 +4,8 @@ Doumentation, Tutorial, Information, Comparasion to another tools
 ## Why apiSQL
 This is tool, which is the first step to reach in practical some parts of goals for UnitApi which will be later the main standard to build any API
 
+
+
 # apiSQL
 This tools is able to create meta data from SQL statement and SQL schema
 The way from SQL to API is possbile with one step, just for configuration
@@ -56,6 +58,45 @@ Param
     Get
     Set
 
+
+### C + Collection
+
+Schema:
+    source-'collection'-model-{command}
+
+Path:
+    {source}/{model}/{param}/{value}/
+
+Example:
+    db/collection/user/create
+    db/collection/user/list
+    
+Create - json
+List
+    Filter - json
+    Range - json
+
+
+
+### RUD + GS
+
+Schema:
+    source-'model'-model-param-value
+
+Path:
+    {source}/{model}/{param}/{value}/
+
+Example:
+    db/model/user/id/10
+    db/model/user/login/tom
+    
+Read
+Update -json
+Delete
+    
+Get
+Set
+
 ### Routing, Example
 
 Model: User
@@ -80,11 +121,26 @@ https://domain/{source}/{model}/param/get/{param}/{name}/
 Example:
 https://domain/source/{source}/model/{model}/param/{param}/get/id/10/
 #### Get Login
-https://domain/source/db/model/user/param/login/get/id/10/
+
+    
+GET https://domain/{source}/{model}/{param}/{value} /param/ login /get/ where / 
+GET https://domain/   db   / user  /   id / 10 /param/ login /get/ where / 
+GET https://domain/source/ db /model/ user /param/ login /get/ where / id / 10 /
 
 #### Set Password
-https://domain/source/db/model/user/param/password/set/id/10/
+PUT https://domain/source/ db /model/ user /param/ password /set/ id / 10 
+{
+    "param":
+}
 
+## SQL Generator
+Creating from Tree of model-name-type
+The SQL Statements for: 
++ Collection
++ Object
++ Param
+
+## SQL Inspector
 
 
 
