@@ -59,27 +59,32 @@ The Code, sdk
         Set
 
 
-### output: collection
+### output: collection | CRUD
+many items
 
     Schema:
         source-output-model-command
 
     Path:
-        {source}/{output}/{model}/{command}
-
-    Example:
-        db/collection/user/create
-        db/collection/user/list
+        {source}/{output}/{model}/{command}    
 
     Command
-        Create - json
-        List
+        Create - json can many create
+        read - can many list
             Filter - json
             Range - json
+            Param: -list of param - Which attributes show
+
+#### Example:
+
+    db/collection/user/read - json
+    db/collection/user/delete - json
+    db/collection/user/update - json
+    db/collection/user/create - json    
 
 
-
-### output: model
+### output: model | RUD
+one item
 
     Schema:
         source-output-model-method-command-param-value
@@ -87,16 +92,19 @@ The Code, sdk
     Path:
         {source}/{output}/{model}/{command}/{param}/{value}/
 
-    Example:
-        db/model/user/id/10
-        db/model/user/login/tom
-
     Command:
         ReadBy
         UpdateBy -json
         DeleteBy
+        
+#### Example:
 
-### output: param
+    db/model/user/ReadBy/id/10
+    db/model/user/DeleteBy/login/tom
+        
+        
+### output: param | GS
+one param from one item
 
     Schema:
         source-output-model-param-param-value
@@ -104,13 +112,14 @@ The Code, sdk
     Path:
         {source}/{output}/{model}/{param}/{command}/{param}/{value}/
 
-    Example:
-        db/model/user/id/10
-        db/model/user/login/tom
-
     Command:
         GetBy
         SetBy
+
+#### Example:
+
+    db/param/model/user/GetBy/id/10
+    db/param/model/user/SetBy/login/tom
     
 ### Routing, Example
 
